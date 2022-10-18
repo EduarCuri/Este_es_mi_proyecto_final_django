@@ -27,4 +27,5 @@ urlpatterns = [
     path('template_modificado/',template_modificado),
     path('template_modificado2/', template_modificado2),
     path('template_modificado2/<nombre>/<apellido>', template_modificado2),
+    path('mostrar_familiares/', mostrar_familiares),
 ]

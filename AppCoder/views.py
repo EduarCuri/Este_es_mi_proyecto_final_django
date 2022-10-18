@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from AppCoder.models import Familiar
 
 # Create your views here.
 
@@ -38,4 +39,11 @@ def template_modificado2(request):
     return render(request, "AppCoder/index2.html",
     {
         "notas" : [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    })
+
+def mostrar_familiares(request):
+    lista_familiares = Familiar.objects.all()
+    return render(request, "AppCoder/familiares.html",
+    {
+        "lista_familiares": lista_familiares
     })
